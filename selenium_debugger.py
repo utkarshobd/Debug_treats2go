@@ -1,6 +1,7 @@
 """
 Selenium-based Comprehensive Navbar Debugger for treats2go.in
 Uses real Chrome browser to bypass anti-bot protection (403 Forbidden)
+Updated: improved stale element handling and click test reliability
 
 Requirements:
     pip install selenium webdriver-manager

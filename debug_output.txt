@@ -1,7 +1,5 @@
+# updated: debug output from navbar_debug.py (requests-based, pre-Selenium)
 ============================================================
-STEP 1: Fetching homepage
-============================================================
-  [delay] 2.02s ...
   [fetch] homepage -> HTTP 200 (29255 bytes)
   Parsed HTML — total tags: 12
   Title: N/A

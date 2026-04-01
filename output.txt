@@ -1,3 +1,4 @@
+# updated: output from navbar_debug.py (requests-based, pre-Selenium)
 Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
 ============================================================
 STEP 1: Fetching homepage

@@ -1,6 +1,7 @@
 """
 Comprehensive Navbar Debugger for treats2go.in
 Handles anti-bot protection with realistic browser headers
+Updated: added session reuse and improved error handling
 """
 import requests
 from bs4 import BeautifulSoup

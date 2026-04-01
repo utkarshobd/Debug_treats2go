@@ -11395,3 +11395,4 @@
 2e 20 4c 65 61 72 6e 20  6d 6f 72 65 3a 20 68 74
 74 70 73 3a 2f 2f 77 70  2d 72 6f 63 6b 65 74 2e
 6d 65 20 2d 2d 3e
+# updated: raw hex dump of homepage response captured by navbar_debug.py

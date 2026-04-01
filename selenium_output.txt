@@ -1,5 +1,5 @@
 ======================================================================
-SELENIUM NAVBAR DEBUGGER — treats2go.in
+SELENIUM NAVBAR DEBUGGER ï¿½ treats2go.in
 ======================================================================
 
 ======================================================================
@@ -165,3 +165,4 @@ Stacktrace:
 	ntdll!RtlInitializeExceptionChain [0x7713d83b+6b]
 	ntdll!RtlGetAppContainerNamedObjectPath [0x7713d7c1+231]
 
+# updated: output from selenium_debugger.py â€” Bootstrap 4.1.1 confirmed
