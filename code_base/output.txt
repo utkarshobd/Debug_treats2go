@@ -1,0 +1,126 @@
+Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+============================================================
+STEP 1: Fetching homepage
+============================================================
+  [delay] 2.02s ...
+  [fetch] homepage -> HTTP 200 (29255 bytes)
+  Parsed HTML — total tags: 12
+  Title: N/A
+
+============================================================
+STEP 2: Navbar container detection
+============================================================
+  [ISSUE] No navbar/nav/header element found!
+
+============================================================
+STEP 3: Bootstrap CSS & JS detection
+============================================================
+  [ISSUE] No Bootstrap CSS found!
+  [ISSUE] No Bootstrap JS found!
+  Bootstrap version assumed: 5
+
+============================================================
+STEP 4: jQuery check
+============================================================
+  [WARN] jQuery not found via <script src>
+
+============================================================
+STEP 5: Target menu items
+============================================================
+  Total links in scope: 0
+  [ISSUE] 'home' NOT found in navbar!
+  [ISSUE] 'shop' NOT found in navbar!
+  [ISSUE] 'personal care' NOT found in navbar!
+  [ISSUE] 'contact' NOT found in navbar!
+
+============================================================
+STEP 6: HTTP status for each target link
+============================================================
+
+============================================================
+STEP 7: Dropdown deep analysis
+============================================================
+  Elements with 'dropdown' class: 0
+  [ISSUE] No dropdown elements found anywhere in page!
+
+============================================================
+STEP 8: Inline CSS conflict scan
+============================================================
+  [OK] No inline CSS conflicts
+
+============================================================
+STEP 9: Inline <style> blocks — dropdown overrides
+============================================================
+  [OK] No dropdown overrides in <style> blocks
+
+============================================================
+STEP 10: All external scripts
+============================================================
+  Total external scripts: 0
+
+============================================================
+FINAL REPORT — ALL ISSUES
+============================================================
+
+  Issue #1
+  Severity  : CRITICAL
+  Component : Navbar
+  Problem   : Navbar container missing
+  Detail    : No <nav>, <header>, or known navbar div found
+  Fix       : Check theme header.php
+
+  Issue #2
+  Severity  : HIGH
+  Component : Bootstrap CSS
+  Problem   : Bootstrap CSS not loaded
+  Detail    : No <link> with 'bootstrap' in href
+  Fix       : Add Bootstrap 5 CDN in <head>
+
+  Issue #3
+  Severity  : HIGH
+  Component : Bootstrap JS
+  Problem   : Bootstrap JS not loaded
+  Detail    : No <script src> with 'bootstrap'
+  Fix       : Add bootstrap.bundle.min.js before </body>
+
+  Issue #4
+  Severity  : HIGH
+  Component : Menu: home
+  Problem   : 'home' missing from navbar
+  Detail    : Link not found in navbar HTML
+  Fix       : Add in WordPress Appearance > Menus
+
+  Issue #5
+  Severity  : HIGH
+  Component : Menu: shop
+  Problem   : 'shop' missing from navbar
+  Detail    : Link not found in navbar HTML
+  Fix       : Add in WordPress Appearance > Menus
+
+  Issue #6
+  Severity  : HIGH
+  Component : Menu: personal care
+  Problem   : 'personal care' missing from navbar
+  Detail    : Link not found in navbar HTML
+  Fix       : Add in WordPress Appearance > Menus
+
+  Issue #7
+  Severity  : HIGH
+  Component : Menu: contact
+  Problem   : 'contact' missing from navbar
+  Detail    : Link not found in navbar HTML
+  Fix       : Add in WordPress Appearance > Menus
+
+  Issue #8
+  Severity  : HIGH
+  Component : Dropdowns
+  Problem   : No dropdown elements in HTML
+  Detail    : No element has a class containing 'dropdown'
+  Fix       : Check if WordPress menu walker outputs dropdown classes; may need custom walker
+
+  Summary:
+    CRITICAL: 1
+    HIGH: 7
+
+  Report saved: report.json
+============================================================

@@ -1,0 +1,79 @@
+[
+  {
+    "severity": "CRITICAL",
+    "component": "Dropdown toggle: 'Foods'",
+    "problem": "Missing data-toggle='dropdown'",
+    "detail": "Bootstrap 4 requires data-toggle='dropdown'. Currently: data-toggle=None",
+    "fix": "Add data-toggle=\"dropdown\" to the <a> tag for 'Foods'"
+  },
+  {
+    "severity": "CRITICAL",
+    "component": "Dropdown click: 'Foods'",
+    "problem": "Dropdown does not open on click",
+    "detail": "After clicking toggle, menu remains hidden. Bootstrap JS is not handling the click event.",
+    "fix": "1. Add data-toggle='dropdown' (BS4) to toggle element. 2. Ensure bootstrap.bundle.min.js is loaded. 3. Check for JS errors in browser console."
+  },
+  {
+    "severity": "CRITICAL",
+    "component": "Dropdown toggle: 'Personal Care'",
+    "problem": "Missing data-toggle='dropdown'",
+    "detail": "Bootstrap 4 requires data-toggle='dropdown'. Currently: data-toggle=None",
+    "fix": "Add data-toggle=\"dropdown\" to the <a> tag for 'Personal Care'"
+  },
+  {
+    "severity": "CRITICAL",
+    "component": "Dropdown click: 'Personal Care'",
+    "problem": "Dropdown does not open on click",
+    "detail": "After clicking toggle, menu remains hidden. Bootstrap JS is not handling the click event.",
+    "fix": "1. Add data-toggle='dropdown' (BS4) to toggle element. 2. Ensure bootstrap.bundle.min.js is loaded. 3. Check for JS errors in browser console."
+  },
+  {
+    "severity": "HIGH",
+    "component": "JS Console",
+    "problem": "Console error: https://treats2go.in/wp-content/themes/groci/js/wishlist-ajax.js?ver=1.0 - Faile",
+    "detail": "https://treats2go.in/wp-content/themes/groci/js/wishlist-ajax.js?ver=1.0 - Failed to load resource: the server responded with a status of 404 ()",
+    "fix": "Fix JavaScript error — may prevent Bootstrap from initializing"
+  },
+  {
+    "severity": "HIGH",
+    "component": "JS Console",
+    "problem": "Console error: https://treats2go.in/wp-content/themes/groci/js/wishlist-ajax.js?ver=1.0 - Faile",
+    "detail": "https://treats2go.in/wp-content/themes/groci/js/wishlist-ajax.js?ver=1.0 - Failed to load resource: the server responded with a status of 404 ()",
+    "fix": "Fix JavaScript error — may prevent Bootstrap from initializing"
+  },
+  {
+    "severity": "HIGH",
+    "component": "JS Console",
+    "problem": "Console error: https://treats2go.in/wp-content/themes/groci/js/wishlist-ajax.js?ver=1.0 - Faile",
+    "detail": "https://treats2go.in/wp-content/themes/groci/js/wishlist-ajax.js?ver=1.0 - Failed to load resource: the server responded with a status of 404 ()",
+    "fix": "Fix JavaScript error — may prevent Bootstrap from initializing"
+  },
+  {
+    "severity": "LOW",
+    "component": "Dropdown: 'Foods'",
+    "problem": "Missing aria-expanded",
+    "detail": "Accessibility attribute absent",
+    "fix": "Add aria-expanded='false' to toggle element"
+  },
+  {
+    "severity": "LOW",
+    "component": "Dropdown: 'Foods'",
+    "problem": "Missing aria-haspopup",
+    "detail": "Accessibility attribute absent",
+    "fix": "Add aria-haspopup='true' to toggle element"
+  },
+  {
+    "severity": "LOW",
+    "component": "Dropdown: 'Personal Care'",
+    "problem": "Missing aria-expanded",
+    "detail": "Accessibility attribute absent",
+    "fix": "Add aria-expanded='false' to toggle element"
+  },
+  {
+    "severity": "LOW",
+    "component": "Dropdown: 'Personal Care'",
+    "problem": "Missing aria-haspopup",
+    "detail": "Accessibility attribute absent",
+    "fix": "Add aria-haspopup='true' to toggle element"
+  }
+]

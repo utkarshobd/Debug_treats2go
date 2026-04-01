@@ -1,0 +1,167 @@
+======================================================================
+SELENIUM NAVBAR DEBUGGER — treats2go.in
+======================================================================
+
+======================================================================
+STEP 1: Loading Homepage
+======================================================================
+  [DELAY] 3.81s ...
+  [OK] Page loaded: https://treats2go.in/
+  [OK] Title: Treats2Go
+  [OK] Page source size: 193748 chars
+
+======================================================================
+STEP 2: Navbar Container Detection
+======================================================================
+  [OK] Navbar found via selector: 'nav'
+       Tag: nav
+       ID: none
+       Class: navbar navbar-light navbar-expand-lg bg-dark bg-faded osahan-menu fixed-menu klb-middle
+
+======================================================================
+STEP 3: Bootstrap CSS & JS Detection
+======================================================================
+  [OK] Bootstrap JS object found, version: 4.1.1
+  [OK] Bootstrap CSS: https://treats2go.in/wp-content/themes/groci/vendor/bootstrap/css/bootstrap.min.css?ver=1.0
+  [OK] Bootstrap CSS: https://treats2go.in/wp-content/themes/groci/vendor/select2/css/select2-bootstrap.css?ver=1.0
+  [OK] Bootstrap JS: https://treats2go.in/wp-content/themes/groci/vendor/bootstrap/js/bootstrap.bundle.min.js?ver=1.0
+  Bootstrap version: 4
+
+======================================================================
+STEP 4: jQuery Check
+======================================================================
+  [OK] jQuery present, version: 3.7.1
+
+======================================================================
+STEP 5: Target Menu Items
+======================================================================
+  [OK] 'home' found: 'Home' -> https://treats2go.in/
+  [OK] 'shop' found: 'Shop' -> https://treats2go.in/shop/
+  [OK] 'personal care' found: 'Personal Care' -> https://treats2go.in/product-category/personal-care/
+  [OK] 'contact' found: 'Contact' -> https://treats2go.in/contact/
+
+======================================================================
+STEP 6: HTTP Status Check for Target Links
+======================================================================
+  [DELAY] 1.52s ...
+  [OK] home: HTTP 200 -> https://treats2go.in/
+  [DELAY] 1.22s ...
+  [OK] shop: HTTP 200 -> https://treats2go.in/shop/
+  [DELAY] 1.61s ...
+  [OK] personal care: HTTP 200 -> https://treats2go.in/product-category/personal-care/
+  [DELAY] 1.05s ...
+  [OK] contact: HTTP 200 -> https://treats2go.in/contact/
+
+======================================================================
+STEP 7: Dropdown Deep Analysis
+======================================================================
+  Total dropdown containers found: 2
+
+  --- Dropdown #1: <li class='nav-item dropdown menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children'>
+    Text              : 'Foods'
+    href              : https://treats2go.in/product-category/foods/
+    class             : nav-link dropdown-toggle
+    data-bs-toggle    : None
+    data-toggle       : None  (Bootstrap 4 attr)
+    aria-expanded     : None
+    aria-haspopup     : None
+    role              : None
+    tabindex          : None
+    id                : ''
+    [CRITICAL ISSUE] data-toggle='dropdown' MISSING!
+    [WARN] aria-expanded missing (accessibility issue)
+    [WARN] aria-haspopup missing (accessibility issue)
+    dropdown-menu     : <ul class='dropdown-menu'>
+    menu visible      : False
+    menu style        : ''
+    [INFO] Menu is hidden (expected when not hovered/clicked)
+    sub-items         : 5
+      - '' -> https://treats2go.in/product-category/foods/sweets-online-bangalore/
+      - '' -> https://treats2go.in/product-category/foods/snacks-online-bangalore/
+      - '' -> https://treats2go.in/product-category/foods/pickles/
+      - '' -> https://treats2go.in/product-category/foods/beverages/
+      - '' -> https://treats2go.in/product-category/foods/masala-chutneys-and-papads/
+    --- Click test for 'Foods' ---
+  [DELAY] 0.93s ...
+  [DELAY] 1.17s ...
+    [WARN] Click test failed: Message: stale element reference: stale element not found
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x124cdf3+10b03]
+	chromedriver!GetHandleVerifier [0x124cf24+10c34]
+	chromedriver!(No symbol) [0x1032120]
+	chromedriver!(No symbol) [0x1044092]
+	chromedriver!(No symbol) [0x104315c]
+	chromedriver!(No symbol) [0x10396b9]
+	chromedriver!(No symbol) [0x1037ad2]
+	chromedriver!(No symbol) [0x103b02a]
+	chromedriver!(No symbol) [0x103b0b8]
+	chromedriver!(No symbol) [0x107a640]
+	chromedriver!(No symbol) [0x107ae6b]
+	chromedriver!(No symbol) [0x10717f1]
+	chromedriver!(No symbol) [0x109db54]
+	chromedriver!(No symbol) [0x10716e4]
+	chromedriver!(No symbol) [0x109dcd4]
+	chromedriver!(No symbol) [0x10ba9a5]
+	chromedriver!(No symbol) [0x109d8a6]
+	chromedriver!(No symbol) [0x1070229]
+	chromedriver!(No symbol) [0x1070fe4]
+	chromedriver!GetHandleVerifier [0x14b48b9+2785c9]
+	chromedriver!GetHandleVerifier [0x14afeb5+273bc5]
+	chromedriver!GetHandleVerifier [0x14ce06b+291d7b]
+	chromedriver!GetHandleVerifier [0x1265cc8+299d8]
+	chromedriver!GetHandleVerifier [0x126d9fd+3170d]
+	chromedriver!GetHandleVerifier [0x12558c8+195d8]
+	chromedriver!GetHandleVerifier [0x1255a92+197a2]
+	chromedriver!GetHandleVerifier [0x123ee9a+2baa]
+	KERNEL32!BaseThreadInitThunk [0x74ee5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7713d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7713d7c1+231]
+
+Traceback (most recent call last):
+  File "c:\Users\utkarshh\Desktop\debug\error_is _here\selenium_debugger.py", line 307, in <module>
+    tag = container.tag_name
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\utkarshh\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webelement.py", line 94, in tag_name
+    return self._execute(Command.GET_ELEMENT_TAG_NAME)["value"]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\utkarshh\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webelement.py", line 572, in _execute
+    return self._parent.execute(command, params)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\utkarshh\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\utkarshh\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 233, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=146.0.7680.165); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x124cdf3+10b03]
+	chromedriver!GetHandleVerifier [0x124cf24+10c34]
+	chromedriver!(No symbol) [0x1032120]
+	chromedriver!(No symbol) [0x1044092]
+	chromedriver!(No symbol) [0x104315c]
+	chromedriver!(No symbol) [0x10396b9]
+	chromedriver!(No symbol) [0x1037ad2]
+	chromedriver!(No symbol) [0x103b02a]
+	chromedriver!(No symbol) [0x103b0b8]
+	chromedriver!(No symbol) [0x10772a7]
+	chromedriver!(No symbol) [0x109db0c]
+	chromedriver!(No symbol) [0x10716e4]
+	chromedriver!(No symbol) [0x109dcd4]
+	chromedriver!(No symbol) [0x10ba9a5]
+	chromedriver!(No symbol) [0x109d8a6]
+	chromedriver!(No symbol) [0x1070229]
+	chromedriver!(No symbol) [0x1070fe4]
+	chromedriver!GetHandleVerifier [0x14b48b9+2785c9]
+	chromedriver!GetHandleVerifier [0x14afeb5+273bc5]
+	chromedriver!GetHandleVerifier [0x14ce06b+291d7b]
+	chromedriver!GetHandleVerifier [0x1265cc8+299d8]
+	chromedriver!GetHandleVerifier [0x126d9fd+3170d]
+	chromedriver!GetHandleVerifier [0x12558c8+195d8]
+	chromedriver!GetHandleVerifier [0x1255a92+197a2]
+	chromedriver!GetHandleVerifier [0x123ee9a+2baa]
+	KERNEL32!BaseThreadInitThunk [0x74ee5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7713d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7713d7c1+231]
+
