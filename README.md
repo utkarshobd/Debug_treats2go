@@ -1,3 +1,4 @@
+<!-- updated -->
 # Navbar Dropdown Debugging Report — treats2go.in
 
 ## Table of Contents
